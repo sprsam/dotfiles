@@ -40,7 +40,7 @@ c_git_clean='\[\e[0;32m\]'
 c_git_dirty='\[\e[0;31m\]'
 
 # PS1 is the variable for the prompt you see everytime you hit enter
-if [ $OSTYPE == 'darwin15' ] && ! [ $ITERM_SESSION_ID ]
+if [ "$TERM_PROGRAM" == 'Apple_Terminal' ] && ! [ $ITERM_SESSION_ID ]
 then
   PROMPT_COMMAND=$PROMPT_COMMAND'; PS1="${c_path}\W${c_reset}$(git_prompt) :> "'
 else
